@@ -4,20 +4,21 @@
 # Write a recursive function called `reverse` that accepts a ss and returns a reversed ss.
 
 def reverse(ss):
-    reverse = ""
+    reverse = "", "a", "ab", "computer"
     for ch in ss:
         reverse = ch + reverse
     return reverse
+    
 
-print(reverse("abcd"))
+print(reverse(""))
 
 # print(reverse("")) 
-# => ""
+# # => ""
 # print(reverse("a")) 
-# => "a"
+# # => "a"
 # print(reverse("ab")) 
-# => "ba"
+# # => "ba"
 # print(reverse("computer")) 
-# => "retupmoc"
+# # => "retupmoc"
 # print(reverse(reverse("computer"))) 
-# => "computer"
+# # => "computer"
