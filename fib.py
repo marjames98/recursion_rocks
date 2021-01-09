@@ -5,9 +5,14 @@
 # https://en.wikipedia.org/wiki/Fibonacci_number
 # For this function, the first two fibonacci numbers are 1 and 1
 
+
 def fib(n):
-    # Write code here
-    pass
+    if (n < 2):
+        return 1
+    else:    
+        return fib(n-1) + fib(n-2)
+
+print([fib(n) for n in range(13)])
 
 # print(fib(-1))
 # => 0
