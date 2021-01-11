@@ -3,18 +3,26 @@
 
 # Write a recursive function called `reverse` that accepts a ss and returns a reversed ss.
 
-def reverse(ss):
-    reverse = "", "a", "ab", "computer"
-    for ch in ss:
-        reverse = ch + reverse
-    return reverse
+# my solution (not working properly)
+# def reverse(ss):
+#     reverse = "", "a", "ab", "computer"
+#     for ch in ss:
+#         reverse = ch + reverse
+#     return reverse
     
+# pete's solution 
+def reverse(input, already_reversed = ''):
+    if len(input) == 0:
+        return already_reversed
 
-print(reverse(""))
+    new_already_reversed = input[0] + already_reversed
+    new_input = input[1:]
+    
+    return reverse(new_input, new_already_reverse) 
 
-# print(reverse("")) 
-# # => ""
-# print(reverse("a")) 
+print(reverse("computer")) 
+
+# print(reverse(""))
 # # => "a"
 # print(reverse("ab")) 
 # # => "ba"
@@ -22,3 +30,5 @@ print(reverse(""))
 # # => "retupmoc"
 # print(reverse(reverse("computer"))) 
 # # => "computer"
+
+# DONE/ GETTING ERRORS 
